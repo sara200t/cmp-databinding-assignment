@@ -6,4 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  oddNumbers = [];
+  evenNumbers = [];
+
+
+  onRunning(countdata: {count: number}) {
+    if (countdata.count % 2 === 0) {
+      this.evenNumbers.push(countdata.count);
+    }
+    else {
+      this.oddNumbers.push(countdata.count);
+    }
+  }
+
 }
