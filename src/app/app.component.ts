@@ -6,17 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  oddNumbers = [];
-  evenNumbers = [];
+  numbers = [];
 
 
   onRunning(countdata: {count: number}) {
-    if (countdata.count % 2 === 0) {
-      this.evenNumbers.push(countdata.count);
-    }
-    else {
-      this.oddNumbers.push(countdata.count);
-    }
+      this.numbers.push(countdata.count);
+    console.log(countdata.count);
   }
 
+  isEven (number: number): boolean {
+    return number % 2 === 0;
+  }
 }
